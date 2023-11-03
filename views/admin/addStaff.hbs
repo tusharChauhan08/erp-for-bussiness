@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Staff</title>
+        <link rel="stylesheet" href="/css/main.css" media="all" type="text/css">
+</head>
+<body>
+    <div class="main-div">
+        <form action="/addStaffPost" method="post">
+            <div class="heading-div">
+                <h1>Welcome Admin!</h1>
+                <p>For adding the staff and there detials.</p>
+            </div>
+            <div class="name-div">
+                <label for="name">Employee-Name:</label>
+                <input type="text" placeholder="Enter employee name here." name="name" id="name">
+            </div>
+            <div class="email-div">
+                <label for="email">Email-id:</label>
+                <input type="email" placeholder="Enter employee email id here." name="email" id="email">
+            </div>
+            <div class="mobile-div">
+                <label for="mobile">Mobile-no:</label>
+                <input type="text" placeholder="Enter employee mobile no here." name="mobile" id="mobile">
+            </div>
+            <div class="pass-div">
+                <label for="password">Employee-id:</label>
+                <input type="password" placeholder="Enter employee id here." name="employeId">
+            </div>
+            <div class="status-div">
+                <label for="">Employee-Status:</label>
+                <input type="text" placeholder="Enter status active or deactive here." name="status">
+            </div>
+            <div class="submit-div">
+                <input type="submit" value="Add">
+                <p>For Admin Dashboard. Please <a href="/login">Click Here</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

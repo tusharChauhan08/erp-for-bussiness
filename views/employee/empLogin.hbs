@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Login</title>
+    <link rel="stylesheet" href="/css/main.css" media="all" type="text/css">
+</head>
+<body>
+    <div class="main-div">
+        {{#if status}}
+        <div class="error-div" style="color:red; font-size:16px;">
+            <span>Your id is inactive so you can't login to your dashboard. Please contact your Admin for further details.</span>
+        </div>
+        {{/if}}
+        <form action="/empLoginPost" method="post">
+            <div class="heading-div">
+                <h1>Welcome Employee!</h1>
+                <p>For accessing the Employee dashboard you have to Login yourself.</p>
+            </div>
+            <div class="email-div">
+                <label for="email">Email-id:</label>
+                <input type="email" placeholder="Enter your email id here." name="email" id="email">
+            </div>
+            <div class="pass-div">
+                <label for="password">Employee-Id:</label>
+                <input type="password" placeholder="Enter your employee id here." id="employeeId" name="employeeId">
+            </div>
+            <div class="submit-div">
+                <input type="submit" value="Login">
+                <p>If you are not register. Please Contact your admin.</p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

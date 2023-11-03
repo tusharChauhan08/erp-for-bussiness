@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="/css/main.css" media="all" type="text/css">
+</head>
+<body>
+    <div class="main-div">
+
+        <form action="/loginPost" method="post">
+            <div class="heading-div">
+                <h1>Welcome Admin!</h1>
+                <p>For accessing the admin dashboard you have to Login yourself.</p>
+            </div>
+            <div class="email-div">
+                <label for="email">Email-id:</label>
+                <input type="email" placeholder="Enter your email id here." name="email" id="email">
+            </div>
+            <div class="pass-div">
+                <label for="password">Password:</label>
+                <input type="password" placeholder="Enter your password here." id="password" name="password">
+            </div>
+            <div class="submit-div">
+                <input type="submit" value="Login">
+                <p>If you are not register. Please Singup <a href="/signup">Click Here</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="/css/main.css" media="all" type="text/css">
+</head>
+<body>
+    <div class="main-div">
+        <form action="/markPost" method="post">
+            <div class="heading-div">
+                <h1>Welcome Employee!</h1>
+                <p>For the Mark your work.</p>
+            </div>
+            <div class="email-div">
+                <label for="email">Work:</label>
+                <select name="work" id="">
+                    <option value="">Select</option>
+                    {{#each result}}
+                    <option value="{{Work}}">{{Work}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <div class="pass-div">
+                <label for="password">Work-Attendance:</label>
+                <select name="attend" id="">
+                    <option value="">Choose One</option>
+                    <option value="Done">Done</option>
+                    <option value="Pending">Pending</option>
+                </select>
+            </div>
+            <div class="submit-div">
+                <input type="submit" value="Change">
+                <p>For Employee Dashboard. Please <a href="/home">Click Here</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

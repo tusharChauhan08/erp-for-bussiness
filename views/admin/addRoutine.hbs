@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Routine</title>
+        <link rel="stylesheet" href="/css/main.css" media="all" type="text/css">
+</head>
+<body>
+    <div class="main-div">
+        <form action="/addRoutinePost" method="post">
+            <div class="heading-div">
+                <h1>Welcome Admin!</h1>
+                <p>For adding the routine of staff.</p>
+            </div>
+            <div class="name-div">
+                <label for="name">Employee-Name:</label>
+                <select name="name" id="">
+                    <option value="">Select Name</option>
+                    {{#each result}}
+                        <option value="{{Employee_Name}}">{{Employee_Name}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <div class="email-div">
+                <label for="email">Email-id:</label>
+                <select name="email" id="">
+                    <option value="">Select Email_id</option>
+                    {{#each result}}
+                        <option value="{{Email_id}}">{{Email_id}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <div class="mobile-div">
+                <label for="mobile">Work:</label>
+                <input type="text" placeholder="Enter work for employee here." name="work" id="mobile">
+            </div>
+            <div class="pass-div">
+                <label for="">Start Work-Time:</label>
+                <input type="time" name="startTime">
+            </div>
+            <div class="status-div">
+                <label for="">End Work-Time:</label>
+                <input type="time" name="endTime">
+            </div>
+            <div class="submit-div">
+                <input type="submit" value="Add">
+                <p>For Admin Dashboard. Please <a href="/admin">Click Here</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

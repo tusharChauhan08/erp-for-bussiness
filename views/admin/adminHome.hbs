@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/css/main.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/font_awesome/css/all.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" type="text/css" media="all">
+</head>
+<body>
+<div class="main-div">
+    <header>
+        <nav>
+          <div class="logo-div">
+            <img src="https://www.agamitechnologies.com/images/Group%20226.svg" alt="">
+          </div>
+          <div class="info-div">
+             <div class="staff-div">
+                <a href="/addStaff"><i class="fa-solid fa-user-plus"></i> Add Staff</a>
+             </div>
+             <div class="routine-div">
+                <a href="/addRoutine"><i class="fa-solid fa-square-plus"></i> Add Routine</a>
+             </div>
+             <div class="atten-div">
+                <a href="/routineDash"><i class="fa-regular fa-calendar-check"></i> Check Routine</a>
+             </div>
+             <div class="atten-div">
+                <a href="/attendance"><i class="fa-solid fa-check-to-slot"></i> Check Attendance</a>
+             </div>
+             <div class="logout-div">
+                <a href="/logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+             </div>
+          </div>
+        </nav>
+    </header>
+    <section>
+        <div class="table-div">
+            <table class="adminTable">
+                <thead>
+                    <tr>
+                        <td>Employee-Name</td>
+                        <td>Mobile-no.</td>
+                        <td>Email-id</td>
+                        <td>Employee-id</td>
+                        <td>Status</td>
+                        <td>Buttons</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each result}}
+                    <tr>
+                        <td>{{Employee_Name}}</td>
+                        <td>{{Mobile_no}}</td>
+                        <td>{{Email_id}}</td>
+                        <td>{{Employee_id}}</td>
+                        <td>{{Status}}</td>
+                        <td><a href="/changeStatus"> Change Status</a></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <script src="/JQuery/jquery-3.6.1.min.js"></script>
+    <script src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script>
+         $(document).ready(function () {
+            $('.adminTable').DataTable({
+                responsive: true,
+            });
+     });
+    </script>
+</div>
+
+</body>
+</html>
